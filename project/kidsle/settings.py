@@ -103,6 +103,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'compresses_static', 'Cache')
+
 COMPRESS_PRECOMPILERS = (
    ('text/less', 'lessc {infile} {outfile}'),
 )
@@ -142,7 +144,7 @@ LEAFLET_CONFIG = {
     'DEFAULT_CENTER': (51.34, 12.37),
     'DEFAULT_ZOOM': 15,
     'RESET_VIEW': False,
-    'TILES': '    http://api.mapbox.com/v4/mapbox.streets/0/0/0.png?access_token=pk.eyJ1IjoidGhlbWFrZXJtYWZpYSIsImEiOiJ1TTNqazF3In0.diqXR455aEg5yfGD-CTgPg',
+    'TILES': 'http://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidGhlbWFrZXJtYWZpYSIsImEiOiJ1TTNqazF3In0.diqXR455aEg5yfGD-CTgPg',
     'ATTRIBUTION_PREFIX': u'<a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox © OpenStreetMap</a>'
 }
 
